@@ -778,7 +778,7 @@ var timeline = [];
 // timeline.push(welcome);
 timeline.push(instruction_timeline);
 // timeline.push(practice);
-// timeline.push(exp);
+timeline.push(exp);
 timeline.push(endexp);
 
 jsPsych.data.addProperties({subject: subjectID});
