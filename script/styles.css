@@ -1,0 +1,112 @@
+.text-stimuli {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.view-choices-text {
+  visibility: hidden;
+}
+
+.new-word {
+  color: red;
+}
+
+.status-bar {
+  margin-block: 2em;
+}
+
+.stats {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.stats-score {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+.stats-remaining {
+  font-size: 1em;
+  margin: 5px;
+}
+
+.prac-instructions {
+  color: red;
+}
+
+.narrow-text {
+  max-width: 60%;
+  margin: auto;
+}
+
+/* demographics */
+/*
+.demographics-drop-down {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+*/
+.demographics-container {
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demographics-container select {
+  height:37px;
+}
+
+.demographics-input {
+  padding:3px 6px;
+  margin: 3px 0 0 0;
+  display: block;
+  font-size:15px;
+  line-height:1.846;
+  color:#666666;
+  background-color:transparent;
+  background-image:none;
+  border:1px solid transparent;
+  border-radius:3px;
+  /* these two are the same (I assume they're for different browsers):
+  they control the shadow around the element */ 
+  -webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  /* these three are the same: they produce smooth transitions when certain properties
+  are changed (e.g. border-color or box-shadow) when something happens to the 
+  element (e.g. the element comes into focus) */ 
+  -webkit-transition:border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.demographics-input:focus {
+  border-color:#66afe9;
+  outline:0;
+  -webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* language background */
+
+.table_component {
+  overflow: auto;
+  width: 100%;
+}
+
+.table_component table {
+  border: none;
+  height: 100%;
+  /* width: 50%; */
+  /* max-width: 60%; */
+  margin: auto;
+  table-layout: auto;
+  border-spacing: 10px;
+  text-align: left;
+}
+
+.lbq_env_number {
+  width: 3em;
+}
