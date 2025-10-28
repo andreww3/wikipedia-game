@@ -335,7 +335,7 @@ var instructions = {
   type: jsPsychInstructions,
   data: {section: "instructions"},
   pages: [
-    `<div class="narrow-text"><p>In this game, you will see extracts of Wikipedia articles, but some of the words have been covered up. Your aim is to guess the topic of the article from the remaining words.</p><p>The articles give a general description about each topic and can be about anything: people, places, objects, theoretical concepts, and so on.</p><p>Please do not look anything up online!</p></div>`,
+    `<div class="narrow-text"><p>In this game, you will see extracts of Wikipedia articles, but some of the words have been covered up. Your aim is to guess the topic of the article from the remaining words.</p><p>The articles give a general description about each topic and can be about anything: people, places, objects, theoretical concepts, and so on.</p></div>`,
     `<div class="narrow-text"><p>Make your guess by clicking on the options below the text. Each time you make a guess, a certain number more words will be revealed. This may reveal a lot more words, or may not reveal any words at all. The new words will be highlighted. Please take the time to check carefully to see which words have been revealed each time.</p><p>You must be sure about your choice: in order to correctly guess the article, you will need to click the correct option 3 times in a row.</p><p>Keep guessing until you run out of tries. A status bar below will show how many guesses you have made so far.</p></div>`,
     `<div class="narrow-text"><p>Your score shows how well you are doing. You will start with 30 points. If you don't get the answer, you will lose 2 points. If you successfully get the right answer, you will win points, and you will win more points if you guess it in fewer tries.</p></div>`
   ],
@@ -422,11 +422,7 @@ var instructions_quiz_check = {
 }
 
 var instruction_timeline = {
-  timeline: [instructions, instructions_quiz, instructions_quiz_check],
-  loop_function: data => {
-    var last_trial_data = data.last(1).values()[0];
-    return last_trial_data.section === "instruction_check_failed"
-  }
+  timeline: [instructions],
 }
 
 /*
@@ -604,8 +600,8 @@ var view_choices = {
   choices: () => curr_choices,
   prompt: () => {
     return `
-      <p>Take a moment to look at the choices.</p>
-      <p>When you are ready, click any of them to continue.</p>
+      <p>Take a moment to look at the choices. When you are ready, click any to continue.</p>
+      <p>You need to click the correct answer 3 times in a row to win.</p>
       <div class="stats"><p class='stats-score'>Score: ${score}</p><p class='stats-remaining'>Remaining: ${num_trials_total-(curr_trial_num-1)}</p></div>
     `;
   },
@@ -756,7 +752,7 @@ var endscreen = {
 
     return [`
       <p>That's it! Your final score is <strong>${score}</strong></p>
-      <p>Press continue to exit fullscreen mode and see your completion code.</p>
+      <p>Thanks for playing!</p>
     `];
   },
   show_clickable_nav: true,
@@ -771,7 +767,7 @@ var end_fullscreen = {
 }
 
 var endexp = {
-  timeline: [endscreen, end_fullscreen]
+  timeline: [endscreen]
 }
 
 /*
@@ -779,10 +775,10 @@ var endexp = {
 */
 
 var timeline = [];
-timeline.push(welcome);
+// timeline.push(welcome);
 timeline.push(instruction_timeline);
-timeline.push(practice);
-timeline.push(exp);
+// timeline.push(practice);
+// timeline.push(exp);
 timeline.push(endexp);
 
 jsPsych.data.addProperties({subject: subjectID});
