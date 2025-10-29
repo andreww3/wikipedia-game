@@ -56,7 +56,7 @@ var catch_texts = {
 };
 var catch_1_choices = ['Fossil fuel', 'Milky Way', 'Game', 'Carbon dioxide', 'Sport', 'Water', 'Film', 'Queen', 'Art', 'Strongly Agree', 'Science', 'Book'];
 var catch_1 = {text_id: 1, article_title: "Strongly Agree", choices: catch_1_choices, condition: "catch"};
-trials.splice(4, 0, catch_1);
+// trials.splice(4, 0, catch_1);
 
 // add trial number to trials
 for (i = 0; i < trials.length; i++) {trials[i].trial_number = i+1}; //add trial num as timeline var
