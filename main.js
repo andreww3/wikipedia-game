@@ -17,7 +17,7 @@ var core_word_lists = ['AoA', 'InStrength', 'Freq', 'cooccurrence.Instrength.COC
 var num_trials_per_cond = 6;
 var num_trials = core_word_lists.length * num_trials_per_cond;
 var num_catch_trials = 1;
-var num_trials_total = num_trials + num_catch_trials;
+var num_trials_total = num_trials; // + num_catch_trials;
 var article_title_token = "ARTICLETITLE";
 var article_title_str = "...";
 var fa_full = '<i class="fa-solid fa-circle-chevron-right fa-2x"></i>';
